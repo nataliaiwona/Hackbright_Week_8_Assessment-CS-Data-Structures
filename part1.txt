@@ -1,0 +1,130 @@
+Part 1: Discussion Questions
+
+Runtime
+
+When calculating the Big O notation for a particular algorithm, it’s necessary to consider the length of time it takes for the algorithm to run as the algorithm’s workload approaches infinity. You can think of the workload as the number of tasks required to complete a job. What determines the workload of figuring out whether your box of animal crackers contains an elephant?
+
+O(n)
+
+if "elephant" in animal_crackers:
+    return True
+
+
+Order the following runtimes in descending order of efficiency (that is, fastest runtimes first, slowest last) as n approaches infinity:
+O(log n)
+O(n2)
+O(n log n)
+O(n)
+O(2n) (i.e. 2 to the n-th power)
+O(1)
+
+
+1. O(1)
+2. O(log n)
+3. O(n)
+4. O(n log n)
+5. O(n^2)
+6. O(2^n)
+
+
+Stacks and Queues
+
+In the following cases, would a stack or queue be a more appropriate data structure?
+The process of loading and unloading pallets onto a flatbed truck
+
+Stack. Loading pallets one on top of the next, and unloading from top of the stack.
+Last in, first out. 
+
+Putting bottle caps on bottles of beer as they roll down an assembly line
+
+Queue. An assembly line takes each item as it comes in. First in, first out.
+
+
+Calculating the solution to this mathematical expression: 2 + (7 * 4) - (3 / 2)
+
+This would be a stack. You can do this using postfix notation. It seems, that in
+order to calculating the solution, one would first need to implement a stack to
+convert from infix to postfix, and then use a stack to evaluate the expression.
+
+Describe two more situations where a queue would be an appropriate data structure.
+
+1. Waiting in line to get a cruffin from Mr Holmes Bakehouse
+2. A sequence of yoga poses - you have to do one thing before you can attempt
+the next movement.
+
+
+Describe two more situations where a stack would be an appropriate data structure.
+
+1. Removing items from a full drawer. Need to take the thing from the top off first.
+2. Doing dishes.
+
+
+Linked Lists
+
+Given the linked list below, which are the nodes? What is the data for each node? Where is the head? Where is the tail? (Please be as specific as possible — exactly which parts of the diagram correspond to each part? Arrows? Boxes? Text?)
+
+There are three nodes, which include the box which has a string, the "next" box and the arrow.
+
+Each node contains a string - the text "apple", "berry" and "cherry", respectively.
+
+The head is the first set of boxes and arrow which points to the apple node.
+
+The tail is the last node, which contains the string "cherry" and the next box, 
+pointing to None.
+
+
+What’s the difference between doubly- and singly-linked lists?
+
+Doubly-linked lists have next and prev node attributes. Singly-linked lists
+only have a next node attribute that points to the next node (or None).
+
+Why is it faster to append to a linked list if we keep track of the tail as an attribute?
+
+Because you don't have to traverse through to find the last node (since you're already
+keeping track of it.)
+
+Trees
+
+
+Given the tree above, in what order would a Breadth First Search (BFS) algorithm visit each node until finding burrito (starting at food)? Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+
+After food, visit Italian, Indian, Mexican. Not Italian so add its
+children to queue. Not Indian, so add children to queue. Not Mexican, add children to queue. Go back to beginning of queue. Not lasagna, 
+no children so move on to pizza. Not pizza, add children to queue. 
+Not tikka masala, no children so move on to saag. No children there 
+and not a match, move on to burrito. Burrito is our match.
+
+
+
+Given the tree above, in what order would a Depth First Search (DFS) algorithm visit each node until finding Chicago-style (starting at food)? Just list the order of nodes visited; no need to recreate the state of the algorithm data in your answer.
+
+After food, visit Mexican and its children. Not a match, so
+visit Indian and its children. Not a match, visit Italian and 
+its children, starting with pizza. Visit pizza's children,
+starting with Sicilian, moving to NY style and then finding
+Chicago-style.
+
+Basically, going deep within each node and its children, from right
+to left.
+
+
+How is a binary search tree different from other trees?
+
+It is limited to two children per node, known as "left" and "right" children. They are used for fast searching ( 0(log n) ), and they have rules for arrangement.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
